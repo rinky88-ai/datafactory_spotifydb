@@ -1,0 +1,17 @@
+{
+	"name": "cdc_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS Gen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			}
+		},
+		"schema": {}
+	}
+}
