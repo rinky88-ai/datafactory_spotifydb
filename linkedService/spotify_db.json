@@ -1,0 +1,17 @@
+{
+	"name": "spotify_db",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "trendytechhospital.database.windows.net",
+			"database": "spotify_db",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "sqladmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEIyMTU1MDZCLTJGM0ItNEQwMy04QjQ4LUNFMzZEOTJCQTVCNl9lZWM1ZmQ1MS01MTI4LTQ1MDctOGI0YS05YjRkM2I1YjE1MzYiDQp9"
+		}
+	}
+}
