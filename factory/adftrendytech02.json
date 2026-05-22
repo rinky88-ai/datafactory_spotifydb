@@ -1,0 +1,15 @@
+{
+	"name": "adftrendytech02",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4c0c58db-df30-41c8-9439-4e4b780be690",
+		"tenantId": "aa1158d1-5d3a-426d-9027-20d4ccbb1194"
+	}
+}
