@@ -11,6 +11,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "curr_date",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
 				],
 				"policy": {
@@ -64,7 +70,18 @@
 				"outputs": [
 					{
 						"referenceName": "DataLoadtoLake",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "bronze",
+							"folder": {
+								"value": "@pipeline().parameters.table_nm",
+								"type": "Expression"
+							},
+							"file": {
+								"value": "@concat(pipeline().parameters.table_nm,'_',variables('curr_date'))",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			},
@@ -105,6 +122,23 @@
 						}
 					}
 				}
+			},
+			{
+				"name": "curr_date",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "curr_date",
+					"value": {
+						"value": "@utcNow()",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
@@ -116,6 +150,11 @@
 			},
 			"cdc_col": {
 				"type": "string"
+			}
+		},
+		"variables": {
+			"curr_date": {
+				"type": "String"
 			}
 		},
 		"annotations": []
