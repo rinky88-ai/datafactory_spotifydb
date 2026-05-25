@@ -170,7 +170,7 @@
 						{
 							"type": "Query",
 							"text": {
-								"value": "select max(@{pipeline().parameters.cdc_col}) as maxdate from @{pipeline().parameters.schema_nm}.@{pipeline().parameters.table_nm}",
+								"value": "select max(@{pipeline().parameters.cdc_col}) as cdc from @{pipeline().parameters.schema_nm}.@{pipeline().parameters.table_nm}",
 								"type": "Expression"
 							}
 						}
@@ -204,7 +204,7 @@
 							{
 								"name": "value",
 								"value": {
-									"value": "@activity('findmaxdate').output",
+									"value": "@activity('findmaxdate').output.resultSets[0].rows[0].cdc",
 									"type": "Expression"
 								}
 							}
@@ -245,7 +245,12 @@
 						"referenceName": "cdc_json",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "bronze"
+							"container": "bronze",
+							"folder": "cdc",
+							"file": {
+								"value": "@pipeline().parameters.table_nm",
+								"type": "Expression"
+							}
 						}
 					}
 				]
