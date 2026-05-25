@@ -115,7 +115,8 @@
 								"type": "Expression"
 							}
 						}
-					}
+					},
+					"firstRowOnly": false
 				}
 			},
 			{
