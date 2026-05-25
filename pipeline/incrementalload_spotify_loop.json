@@ -303,7 +303,7 @@
 													"container": "bronze",
 													"folder": "cdc",
 													"file": {
-														"value": "@item().table_nm",
+														"value": "@item().table",
 														"type": "Expression"
 													}
 												}
