@@ -181,10 +181,13 @@
 												"parameters": {
 													"container": "bronze",
 													"folder": {
-														"value": "@pipeline().parameters.table_nm",
+														"value": "@item().table",
 														"type": "Expression"
 													},
-													"file": "@concat(pipeline().parameters.table_nm,'_',variables('curr_date'))"
+													"file": {
+														"value": "@concat(item().table,'_',variables('curr_date'))",
+														"type": "Expression"
+													}
 												}
 											},
 											"enableLogging": false,
