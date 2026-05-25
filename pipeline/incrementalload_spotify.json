@@ -179,7 +179,7 @@
 										"file": "@concat(pipeline().parameters.table_nm,'_',variables('curr_date'))"
 									}
 								},
-								"enableLogging": true,
+								"enableLogging": false,
 								"storeSettings": {
 									"type": "AzureBlobFSReadSettings",
 									"recursive": true,
