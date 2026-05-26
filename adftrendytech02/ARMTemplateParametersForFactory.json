@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adftrendytech02"
+		},
+		"ADLS Gen2_accountKey": {
+			"value": ""
+		},
+		"spotify_db_password": {
+			"value": ""
+		},
+		"ADLS Gen2_properties_typeProperties_url": {
+			"value": "https://adlsspotify01.dfs.core.windows.net"
+		},
+		"spotify_db_properties_typeProperties_server": {
+			"value": "trendytechhospital.database.windows.net"
+		},
+		"spotify_db_properties_typeProperties_database": {
+			"value": "spotify_db"
+		},
+		"spotify_db_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		}
+	}
+}
