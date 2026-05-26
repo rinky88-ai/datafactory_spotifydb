@@ -315,36 +315,6 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "Alerts",
-				"type": "WebActivity",
-				"dependsOn": [
-					{
-						"activity": "ForEach1",
-						"dependencyConditions": [
-							"Failed",
-							"Skipped",
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"method": "POST",
-					"url": "https://portal.azure.com/#@099moumitaghoshgmail.onmicrosoft.com/resource/subscriptions/62cc2055-34df-4209-999a-44201d1dc553/resourceGroups/databricks_e2e_rg/providers/Microsoft.Logic/workflows/logicapp_spotify01/designer",
-					"body": {
-						"value": "{\n    \"pipeline_nm\" : \"@{pipeline().Pipeline}\",\n    \"pipeline_runId\" : \"@{pipeline().RunId}\"\n}",
-						"type": "Expression"
-					}
-				}
 			}
 		],
 		"parameters": {
