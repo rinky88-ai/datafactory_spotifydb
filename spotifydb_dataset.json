@@ -1,0 +1,12 @@
+{
+	"name": "spotifydb_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "spotify_db",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
